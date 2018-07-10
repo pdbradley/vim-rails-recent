@@ -25,7 +25,3 @@ function! VimRailsRecentEditCycle(buffer_list)
   execute 'edit' tmp_list[-1]
   return tmp_list[1:-1] + tmp_list[0:0]
 endfunction
-
-:nnoremap <C-m> :let g:vim_rails_recent_model = VimRailsRecentEditCycle(g:vim_rails_recent_model)<cr>
-:nnoremap <C-c> :let g:vim_rails_recent_controller = VimRailsRecentEditCycle(g:vim_rails_recent_controller)<cr>
-:nnoremap <C-v> :let g:vim_rails_recent_view = VimRailsRecentEditCycle(g:vim_rails_recent_view)<cr>
